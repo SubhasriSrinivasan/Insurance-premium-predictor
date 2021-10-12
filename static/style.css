@@ -1,0 +1,14 @@
+label,button{
+    display: block !important;
+    margin: 2% auto;
+    text-align: center !important;
+}
+input,select{
+    width: 100%;
+}
+body{
+    padding: 5%;
+}
+h1,h3{
+    text-align: center;
+}
