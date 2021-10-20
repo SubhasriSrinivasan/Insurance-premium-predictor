@@ -24,7 +24,7 @@ def predict():
     print(data)
     newdata = [np.array(data)]
     prediction = model.predict(newdata)
-    return render_template('forest.html',info=f"Interest : {prediction[0]}")
+    return render_template('forest.html',info=f"Interest : {prediction[0]:.2f}")
 
 if __name__ == '__main__':
     app.run()
