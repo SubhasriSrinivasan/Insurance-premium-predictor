@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>Insurance Premium Prediction</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="../static/style.css" />
   </head>
   <body>
-    <h1>Check your insurance premium</h1>
+    <h1>Check Your Insurance Premium</h1>
     <form action="/predict" method="POST">
       <label>
-        <div class="row justify-content-center">
+        <div class="row ">
           <div class="col-2">Age</div>
           <div class="col-6">
             <input type="text" name="age" />
@@ -23,7 +23,7 @@
         </div>
       </label>
       <label>
-        <div class="row justify-content-center">
+        <div class="row ">
           <div class="col-2">Sex</div>
           <div class="col-6">
             <select name="sex">
@@ -34,7 +34,7 @@
         </div>
       </label>
       <label>
-        <div class="row justify-content-center">
+        <div class="row ">
           <div class="col-2">Bmi</div>
           <div class="col-6">
             <input type="text" name="bmi" />
@@ -42,7 +42,7 @@
         </div>
       </label>
       <label>
-        <div class="row justify-content-center">
+        <div class="row ">
           <div class="col-2">Children</div>
           <div class="col-6">
             <input type="text" name="children" />
@@ -50,7 +50,7 @@
         </div>
       </label>
       <label>
-        <div class="row justify-content-center">
+        <div class="row ">
           <div class="col-2">Smoker</div>
           <div class="col-6">
             <select name="smoker">
@@ -61,7 +61,7 @@
         </div>
       </label>
       <label>
-        <div class="row justify-content-center">
+        <div class="row ">
           <div class="col-2">Region</div>
           <div class="col-6">
             <select name="region">
@@ -73,8 +73,23 @@
           </div>
         </div>
       </label>
-      <button type="submit" class="btn btn-primary btn-lg">Check</button>
+      <a href="/" class="redirect btn-lg btn btn-primary">Check Again</a>
+      <button type="submit" class="btn btn-primary btn-lg" >Check</button>
     </form>
     <h3>{{info}}</h3>
+    <script>
+        if(window.location.href.search('predict') != -1){
+          document.querySelectorAll('input').forEach((item)=>{
+            item.setAttribute("disabled","true");
+          })
+          document.querySelectorAll('select').forEach((item)=>{
+            item.setAttribute("disabled","true");
+          })
+          document.querySelector('button.btn').style.display = 'none';
+          console.log(document.querySelector('button.btn').style);
+        }else{
+          document.querySelector('.redirect').style.display = 'none';
+        }
+    </script>
   </body>
 </html>

@@ -7,7 +7,7 @@ model=pickle.load(open('model.pkl','rb'))
 
 @app.route('/')
 def showFile():
-    return render_template('forest.html')
+    return render_template('index.html')
 
 @app.route('/predict',methods=['POST','GET'])
 def predict():
@@ -24,7 +24,7 @@ def predict():
     print(data)
     newdata = [np.array(data)]
     prediction = model.predict(newdata)
-    return render_template('forest.html',info=f"Interest : {prediction[0]:.2f}")
+    return render_template('index.html',info=f"Interest : {prediction[0]:.2f}")
 
 if __name__ == '__main__':
     app.run()
