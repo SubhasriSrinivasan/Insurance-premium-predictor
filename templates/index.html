@@ -80,7 +80,7 @@
     <script>
         console.log(window.location.href);
         console.log(window.location.href.search('predict'));
-        if(window.location.href.search('predict') != -1){
+        if(window.location.href.search('predict') == -1){
           document.querySelectorAll('input').forEach((item)=>{
             item.setAttribute("disabled","true");
           })
