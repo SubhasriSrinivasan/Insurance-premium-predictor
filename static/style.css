@@ -65,5 +65,9 @@ option,optgroup{
 }
 .btn{
   background-color: #fff;
-  color: blue;
+  color: #2770c4;
+}
+.btn:hover{
+  color: #fff;
+  background-color: #2077db;
 }

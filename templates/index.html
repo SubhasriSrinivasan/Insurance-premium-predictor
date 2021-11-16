@@ -78,20 +78,20 @@
     </form>
     <h3>{{info}}</h3>
     <script>
-        // console.log(window.location.href);
-        // console.log(window.location.href.search('predict'));
-        // if(window.location.href.search('predict') == -1){
-        //   document.querySelectorAll('input').forEach((item)=>{
-        //     item.setAttribute("disabled","true");
-        //   })
-        //   document.querySelectorAll('select').forEach((item)=>{
-        //     item.setAttribute("disabled","true");
-        //   })
-        //   document.querySelector('button.btn').style.display = 'none';
-        //   console.log(document.querySelector('button.btn').style);
-        // }else{
-        //   document.querySelector('.redirect').style.display = 'none';
-        // }
+        console.log(window.location.href);
+        console.log(window.location.href.search('predict'));
+        if(window.location.href.search('predict') == -1){
+          document.querySelectorAll('input').forEach((item)=>{
+            item.setAttribute("disabled","true");
+          })
+          document.querySelectorAll('select').forEach((item)=>{
+            item.setAttribute("disabled","true");
+          })
+          document.querySelector('button.btn').style.display = 'none';
+          console.log(document.querySelector('button.btn').style);
+        }else{
+          document.querySelector('.redirect').style.display = 'none';
+        }
     </script>
   </body>
 </html>
