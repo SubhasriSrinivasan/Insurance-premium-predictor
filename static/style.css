@@ -60,3 +60,10 @@ input:disabled,select:disabled{
   margin: 0 auto;
   width: max-content;
 }
+option,optgroup{
+  color: #000;
+}
+.btn{
+  background-color: #fff;
+  color: blue;
+}
