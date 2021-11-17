@@ -79,8 +79,8 @@
     <h3>{{info}}</h3>
     <script>
         console.log(window.location.href);
-        console.log(window.location.href.search('predict'));
-        if(window.location.href.search('predict') == -1){
+        console.log(window.location.href.search('/predict'));
+        if(window.location.href.search('/predict') != -1){
           document.querySelectorAll('input').forEach((item)=>{
             item.setAttribute("disabled","true");
           })
