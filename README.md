@@ -3,4 +3,5 @@ A small web app which uses Random Forest Model to calculate the insurance premiu
 
 Steps to run (Please make sure all python packages are installed)
 - git clone https://github.com/raghav13901/FlaskIntegration.git
+- pip install -r requirements.txt
 - flask run
